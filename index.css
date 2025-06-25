@@ -1,0 +1,256 @@
+:root{
+--Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+--Light-Grayish-Blue: hsl(234, 14%, 74%);
+--Grayish-Blue: hsl(233, 13%, 49%);
+--Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+body{
+    opacity: 0.8;
+    background-color: var(--Very-Light-Grayish-Blue);
+}
+.wrapper {
+    position: relative;
+   overflow: hidden;
+}
+.background-img{
+    position: absolute;
+    right: -192px;
+    top: -50px;
+    z-index: -1;
+}
+.background-img2{
+    display: none;
+}
+.brand{
+     font-weight: 700;
+     font-size: 2.4rem;
+     color: var(--Dark-Grayish-Blue);
+     margin-top: 50px;
+     margin-bottom: 35px;
+}
+.toggle-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    user-select: none;
+    margin-bottom: 20px;
+    
+    p{
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: var(--Dark-Grayish-Blue);
+        opacity: 0.6;
+    }
+}
+.toggle {
+   
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 40px;
+}
+
+.toggle input {
+  
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+     user-select: none; 
+  position: absolute;
+  cursor: pointer;
+  background-color: #6459dd;
+  border-radius: 34px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 5px;
+  top: 5px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* When toggled ON */
+#billing-toggle:checked + .toggle-container .slider::before {
+  transform: translateX(35px);
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid white;
+    background-color: white;
+    margin-top: 79px;
+    text-align: center;
+    height: 500px;
+    width: 90vw;
+    border-radius: 15px;
+}
+.card2{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid white;
+    background: linear-gradient(to bottom, hsl(236, 33%, 55%) ,hsl(237, 56%, 55%));
+    margin-top: 79px;
+    text-align: center;
+    height: 500px;
+    width: 90vw;
+    border-radius: 15px;
+    opacity: 1.5 !important;
+    button{
+        color: hsl(237, 56%, 55%) !important;
+        background: linear-gradient(to right, hsl(235, 44%, 95%) ,hsl(240, 17%, 94%)) !important;
+    }
+}
+.card3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid white;
+    background-color: white;
+    margin-top: 79px;
+    text-align: center;
+    height: 500px;
+    width: 90vw;
+    border-radius: 15px;
+}
+hr{
+    width: 73vw;
+    margin: 0 auto;
+}
+.head{
+        margin-top: 8px;
+        font-weight: bold;
+        font-size: 27px;
+        opacity: 0.7;
+        padding: 1rem;
+    }
+.price{
+        font-weight: 700;
+        font-size: 75px;
+        opacity: 0.8;
+        
+    }
+.storage{
+    font-size: 20px;
+    font-weight: 750;
+    opacity: 0.6;
+}
+.max-users{
+    font-size: 20px;
+    font-weight: 750;
+    opacity: 0.6;
+}
+.max-storage{
+    font-size: 20px;
+    font-weight: 750;
+    opacity: 0.6;
+}
+button{
+    height: 46px;
+    width: 73vw;
+    margin: 0 auto;
+    background: linear-gradient(to right, hsl(236, 31%, 35%) ,hsl(237, 56%, 55%));
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 850;
+    margin-bottom: 20px;
+}
+.price-month{
+        display: none;
+}
+
+#billing-toggle:checked ~ .cards-container .price {
+  display: none;
+}
+
+#billing-toggle:checked ~ .cards-container .price-month {
+  display: block;
+  font-weight: 700;
+        font-size: 75px;
+        opacity: 0.8;
+}
+@media screen and (min-width:1024px) {
+    .toggle-container{
+       justify-content: center;
+       gap: 20px;
+    }
+    .cards-container{
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+    }
+    .card1{
+        width: 25vw;
+        margin-top: 1px;
+    }
+    .card2{
+        width: 25vw;
+        transform: scale(1.1);
+        align-self: center;
+         margin-top: 1px;
+    }
+    .card3{
+        width: 25vw;
+         margin-top: 1px;
+    }
+    button{
+        width: 20vw;
+    }
+    hr{
+       width: 20vw; 
+    }
+    .background-img{
+    position: absolute;
+    right: -38px;
+    top: -6px;
+    z-index: -1;
+}
+.price{
+        font-weight: 700;
+        font-size: 3rem;
+        opacity: 0.8;
+        
+    }
+    #billing-toggle:checked ~ .cards-container .price-month {
+  font-weight: 700;
+        font-size: 3rem;
+        opacity: 0.8;
+}
+.background-img2{
+   display: block;
+    position: absolute;
+    bottom: -51px;
+    z-index: -2;
+}
+    
+
+}
