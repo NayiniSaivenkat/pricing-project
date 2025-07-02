@@ -1,50 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Pricing component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-     <link rel="stylesheet" href="./index.css">
-    <style>
-      .attribution {.price-month{
-        display: none;
-}
+  <title>Pricing component</title>
+  <link rel="stylesheet" href="./index.css">
 
-#billing-toggle:checked ~ .cards-container .price {
-  display: none;
-}
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
 
-#billing-toggle:checked ~ .cards-container .price-month {
-  display: block;
-  font-weight: 700;
-        font-size: 75px;
-        opacity: 0.8;
-}
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
+<body>
 
+
+  <div class="container">
     
-    <img  class="background-img" src="./images/bg-top.svg" alt="img-top">
-    <img  class="background-img2" src="./images/bg-bottom.svg" alt="img-bottom" />
+
+
     <p class="brand">Our Pricing</p>
       
     <input type="checkbox" id="billing-toggle" hidden />
@@ -56,57 +35,59 @@
   </label>
   <p>Monthly</p>
 </div>
-  
+
+
     <div class="cards-container">
-      <div class="card1">
-        <p class="head">Basic</p>
-        <p class="price">$199.99</p>
-        <p class="price-month">$19.9</p>
+      <div class="cards card1"> <span class="light-color card-heading">Basic</span>
+        <div class="dollar">$ <span class="price amount"> 199.99</span><span class="price-month amount"> 19.99</span> </div>
         <hr>
-        <p class="storage">500 GB Storage</p>
+
+        <div class="light-color max-storage">500 GB Storage</div>
         <hr>
-        <p class="max-users">2 Users Allowed</p>
+
+        <div class="light-color max-members">2 Users Allowed</div>
         <hr>
-        <p class="max-storage">Send up to 3 GB</p>
+
+        <div class="light-color max-share">Send up to 3 GB</div>
         <hr>
-        <button>LEARN MORE</button>
+
+        <div class="learnmore button-1">LEARN MORE</div>
+
       </div>
-      <div class="card2">
-         <p class="head">Professional</p>
-        <p class="price">$249.99</p>
-        <p class="price-month">$24.9</p>
+      <div class="cards card2"><span class="card-heading">Professional</span>
+        <div class="dollar">$ <span class="price amount"> 249.99</span><span class="price-month amount"> 24.99</span> </div>
         <hr>
-        <p class="storage">1 TB GB Storage</p>
+        <div class="max-storage">1 TB Storage</div>
         <hr>
-        <p class="max-users">5 Users Allowed</p>
+
+        <div class="max-members">5 Users Allowed</div>
         <hr>
-        <p class="max-storage">Send up to 10 GB</p>
+
+        <div class="max-share">Send up to 10 GB</div>
         <hr>
-        <button>LEARN MORE</button>
+
+        <div class="learnmore button-2">LEARN MORE</div>
       </div>
-      <div class="card3">
-         <p class="head">Master</p>
-        <p class="price">$399.99</p>
-        <p class="price-month">$39.9</p>
+      <div class="cards card3"><span class="light-color card-heading">Master</span>
+        <div class="dollar">$ <span class="price amount"> 399.99</span><span class="price-month amount"> 39.99</span> </div>
         <hr>
-        <p class="storage">2TB GB Storage</p>
+        <div class="light-color max-storage">2 TB Storage</div>
         <hr>
-        <p class="max-users">10 Users Allowed</p>
+
+        <div class="light-color max-members">10 Users Allowed</div>
         <hr>
-        <p class="max-storage">Send up to 20 GB</p>
+
+        <div class="light-color max-share">Send up to 20 GB</div>
         <hr>
-        <button>LEARN MORE</button>
-      
+
+        <div class="learnmore button-3">LEARN MORE</div>
+      </div>
     </div>
+
+  </div>
   </div>
 
-    </div>
-  </body>
+</body>
+
+
 </html>
-
-
-  <!-- Our Pricing Annually Monthly Basic &dollar;19.99 &dollar;199.99 500 GB
-    Storage 2 Users Allowed Send up to 3 GB Learn More Professional
-    &dollar;24.99 &dollar;249.99 1 TB Storage 5 Users Allowed Send up to 10 GB
-    Learn More Master &dollar;39.99 &dollar;399.99 2 TB Storage 10 Users Allowed
-    Send up to 20 GB Learn More -->
